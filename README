@@ -1,0 +1,30 @@
+Prerequisites:
+Server
+  node.js
+  node-irc npm
+  socket.io npm
+
+Client
+  php w/ mcrypt (if you are using PHP to encrypt the data for the client)
+
+
+Running:
+Edit the configs in birch-server/birch_tree.js
+Edit the configs in birch-client/index.php
+*make sure the encrypt keys match in order to send data back and forth securely
+
+Start the server
+  $ node birch_tree.js
+
+Open the client
+http://your.host.com/birch/?user=birchUser
+
+The client is just an example as to how to pass a username to the server and know that it has not been modified on the client side.  You'll probably want to change this part around a bit to give the user a username based on their creditials to your site or generate a random user name for the users irc session.
+
+
+Client Features:
+By default the client has a few addons enabled:
+* tab nick completion
+* highlighting of messages that mention the users nick
+* pageination (p to page up, n to page down)
+* message notification-- when your window doesn't have focus it will update the title bar when it gets a new message.  The title will be prepended with a ! if you have been hilighted.
