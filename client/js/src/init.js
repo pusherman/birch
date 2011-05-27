@@ -1,7 +1,7 @@
 var birch = {};
 
 birch.config = {
-  serverHost: '2catdesigns.com',
+  serverHost: 'some.host.com',
   serverPort: 8090
 };
 
